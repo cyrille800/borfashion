@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title> Nephos :: Modern Bulma Ecommerce App and Dashboard</title>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+        <!--Core CSS -->
+        <link rel="stylesheet" href="assets/css/bulma.css">
+        <link rel="stylesheet" href="assets/css/core.css">
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+        
+        <!-- plugins -->
+        <link rel="stylesheet" href="assets/js/slick/slick.css">
+        <link rel="stylesheet" href="assets/js/slick/slick-theme.css">
+        <link rel="stylesheet" href="assets/js/webuipopover/jquery.webui-popover.min.css">
+        <link rel="stylesheet" href="assets/js/izitoast/css/iziToast.min.css">
+        <link rel="stylesheet" href="assets/js/zoom/zoom.css">
+        <link rel="stylesheet" href="assets/js/jpcard/card.css">
+        <link rel="stylesheet" href="assets/css/chosen/chosen.css">
+        <link rel="stylesheet" href="assets/css/icons.min.css">
+
+    </head>
+    <body>
+        
+        <!-- Main wrapper -->
+        <div class="shop-wrapper" style="margin-left:0;width:100%;">
+        
+            <div class="section">
+                <!-- Container -->
+                <div class="container">
+        
+                    <!-- Cart page -->
+                    <div class="columns account-header">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <div class="account-title">
+                                <h2>MY CART</h2>
+                                <img class="brand-filigrane" src="assets/images/logo/nephos-greyscale.svg" alt="">
+                            </div>
+        
+                            <!-- Account tabs -->
+                            <div class="tabs account-tabs">
+                                <ul>
+                                    <li><a href="compte_client.php">Mon compte</a></li>
+                                    <li><a href="pub&offre.php">Pub & Offre</a></li>
+                                    <li class="is-active"><a href="panier.php">Panier</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Total and checkout -->
+                            <div class="cart-summary">
+                                <span class="cart-total">
+                                    1521,94 <small>5 <span>items in cart</span></small>
+                                </span>
+                                <a href="paiement1.php" class="button feather-button is-bold primary-button raised">
+                                    CHECKOUT
+                                </a>
+                            </div>
+        
+                            <!-- Cart Layout -->
+                            <div class="columns is-account-grid is-multiline" style="display:none;">
+                                <!-- Product list -->
+                                <div class="column is-12">
+                                    <!-- Product -->
+                                    <div class="flat-card is-auto cart-card">
+                                        <ul class="cart-content">
+                                            <li>
+                                                <img src="assets/images/products/office6.png" alt="">
+                                                <span class="product-info">
+                                                    <span>The Conqueror</span>
+                                                    <span>Office</span>
+                                                </span>
+                                                <span class="product-price">
+                                                    <span>Price</span>
+                                                    <span>385,00</span>
+                                                </span>
+        
+                                                <span class="product-quantity">
+                                                    <span>Qty</span>
+                                                    <span class="control">
+                                                        <input class="input" type="number" value="1">
+                                                    </span>
+                                                </span>
+        
+                                                <span class="action">
+                                                    <span class="action-link is-like has-simple-popover" data-content="Add to Wishlist" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="heart"></i></a>
+                                                    </span>
+                                                    <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="x"></i></a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Product -->
+                                    <div class="flat-card is-auto cart-card">
+                                        <ul class="cart-content">
+                                            <li>
+                                                <img src="assets/images/products/office7.gif" alt="">
+                                                <span class="product-info">
+                                                    <span>The Gentleman</span>
+                                                    <span>Office</span>
+                                                </span>
+                                                <span class="product-price">
+                                                    <span>Price</span>
+                                                    <span>329,00</span>
+                                                </span>
+        
+                                                <span class="product-quantity">
+                                                    <span>Qty</span>
+                                                    <span class="control">
+                                                        <input class="input" type="number" value="1">
+                                                    </span>
+                                                </span>
+        
+                                                <span class="action">
+                                                    <span class="action-link is-like has-simple-popover" data-content="Add to Wishlist" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="heart"></i></a>
+                                                    </span>
+                                                    <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="x"></i></a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Product -->
+                                    <div class="flat-card is-auto cart-card">
+                                        <ul class="cart-content">
+                                            <li>
+                                                <img src="assets/images/products/kids7.jpg" alt="">
+                                                <span class="product-info">
+                                                    <span>Child Desk</span>
+                                                    <span>Kids</span>
+                                                </span>
+                                                <span class="product-price">
+                                                    <span>Price</span>
+                                                    <span>278,00</span>
+                                                </span>
+        
+                                                <span class="product-quantity">
+                                                    <span>Qty</span>
+                                                    <span class="control">
+                                                        <input class="input" type="number" value="1">
+                                                    </span>
+                                                </span>
+        
+                                                <span class="action">
+                                                    <span class="action-link is-like has-simple-popover" data-content="Add to Wishlist" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="heart"></i></a>
+                                                    </span>
+                                                    <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="x"></i></a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Product -->
+                                    <div class="flat-card is-auto cart-card">
+                                        <ul class="cart-content">
+                                            <li>
+                                                <img src="assets/images/products/access4.jpg" alt="">
+                                                <span class="product-info">
+                                                    <span>Design Shelf</span>
+                                                    <span>House</span>
+                                                </span>
+                                                <span class="product-price">
+                                                    <span>Price</span>
+                                                    <span>529,00</span>
+                                                </span>
+        
+                                                <span class="product-quantity">
+                                                    <span>Qty</span>
+                                                    <span class="control">
+                                                        <input class="input" type="number" value="1">
+                                                    </span>
+                                                </span>
+        
+                                                <span class="action">
+                                                    <span class="action-link is-like has-simple-popover" data-content="Add to Wishlist" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="heart"></i></a>
+                                                    </span>
+                                                    <span class="action-link is-remove has-simple-popover" data-content="Remove from Cart" data-placement="top">
+                                                        <a href="#"><i class="feather-icons" data-feather="x"></i></a>
+                                                    </span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /Product -->
+                                </div>
+                            </div>
+                            <!-- /Cart Layout -->
+                        </div>
+                    </div>
+                    <!-- /Cart page -->
+        
+                    <!-- Recently Viewed -->
+                    <div class="columns category-header low-padding">
+                        <div class="column is-10 is-offset-1 is-tablet-landscape-padded">
+                            <!-- Title -->
+                            <div class="category-title">
+                                <h2 class="is-small">RECENTLY VIEWED</h2>
+                            </div>
+        
+                            <!-- Product grid -->
+                            <div class="columns no-controls is-product-grid is-multiline">
+                                <!-- Product -->
+                                <div class="column is-9">
+                                    <div class="flat-card is-long">
+                                        <div class="left-image is-md">
+                                            <img src="assets/images/products/red-seat.jpg" alt="">
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="#"><h3 class="product-name featured">Red Alcove</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                90,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="column is-3">
+                                    <div class="flat-card">
+                                        <div class="image">
+                                            <img src="assets/images/products/cosy-red-seat.png" alt="">
+                                        </div>
+                                        <div class="product-info has-text-centered">
+                                            <a href="#"><h3 class="product-name">Red Seat</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                75,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="column is-3">
+                                    <div class="flat-card">
+                                        <div class="image">
+                                            <img src="assets/images/products/office4.jpg" alt="">
+                                        </div>
+                                        <div class="product-info has-text-centered">
+                                            <a href="#"><h3 class="product-name">Executive</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                125,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="column is-3">
+                                    <div class="flat-card">
+                                        <div class="image">
+                                            <img src="assets/images/products/office5.jpg" alt="">
+                                        </div>
+                                        <div class="product-info has-text-centered">
+                                            <a href="#"><h3 class="product-name">Cosy chair</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                88,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="column">
+                                    <div class="flat-card is-long">
+                                        <div class="left-image is-md">
+                                            <img src="assets/images/products/office3.jpg" alt="">
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="#"><h3 class="product-name featured-md">Ambassador</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                480,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!-- Product -->
+                                <div class="column is-6">
+                                    <div class="flat-card is-long">
+                                        <div class="left-image is-md">
+                                            <img src="assets/images/products/office6.png" alt="">
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="#"><h3 class="product-name featured-md">Conqueror</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                590,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="column is-6">
+                                    <div class="flat-card is-long">
+                                        <div class="left-image is-md">
+                                            <img src="assets/images/products/office7.gif" alt="">
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="#"><h3 class="product-name featured-md">Gentleman</h3></a>
+                                            <p class="product-description">Lorem ipsum sit dolor amet</p>
+                                            <p class="product-price">
+                                                375,00
+                                            </p>
+                                        </div>
+        
+                                        <div class="actions">
+                                            <div class="add"><i data-feather="shopping-cart"></i></div>
+                                            <div class="like"><i data-feather="heart"></i></div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- /Product grid -->
+        
+                            <div class="show-more"><a href="#">Show more products</a></div>
+        
+                        </div>
+                    </div> 
+                    <!-- /Recently Viewed -->
+                </div>
+                <!-- /Container -->
+            </div>
+            <!-- /Main section -->
+        </div>
+        <!-- /Main wrapper -->
+        <!-- Concatenated plugins -->
+        <script src="assets/js/app.js"></script>
+        <!-- Helios js -->
+        <script src="assets/js/nephos.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".columns.is-account-grid.is-multiline").fadeIn("100");
+    })
+</script>
+</body>  
+</html>

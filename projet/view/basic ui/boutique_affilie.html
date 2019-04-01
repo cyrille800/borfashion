@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="admin template, angular admin template, bootstrap admin template, modern admin template, modern design admin template, dashboard template, responsive admin template, angular web app, crypto dashboard, bitcoin dashboard">
+    <title>Bootstrap &amp; Angular admin template + crypto dashboard - modern design admin | Boutique</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../assets/vendors/feather-icons/feather.css" rel="stylesheet" />
+    <link href="../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../assets/vendors/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="../assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" /><!-- PAGE LEVEL VENDORS-->
+    <link href="../assets/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet" /><!-- THEME STYLES-->
+    <link href="../assets/css/app.min.css" rel="stylesheet" /><!-- PAGE LEVEL STYLES-->
+</head>
+
+<body class="mini-sidebar">
+    <div class="page-wrapper">
+        <div class="content-wrapper">
+            <!-- BEGIN: Content-->
+            <div class="content-area" style="background-color: #F0F0F0">
+                <!-- BEGIN: Header-->
+                <nav class="navbar navbar-expand navbar-light fixed-top header col-md-3" style="margin:auto;margin-top:0.5%;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link navbar-icon" href="javascript:;" data-toggle="modal" data-target="#search-modal"><i class="ft-search"></i></a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle navbar-icon" data-toggle="dropdown" href="#"><i class="ft-bell position-relative"></i><span class="notify-signal bg-primary"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0" style="min-width: 350px">
+                                <div class="py-4 px-3 text-center text-white mb-3" style="background-color: #2c2f48;">
+                                    <h5 class="m-0">7 New Notifications</h5>
+                                </div>
+                                <div class="custom-scroll position-relative mb-3" style="height:320px;">
+                                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-shopping-cart text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">2 New Orders</h6>
+                                                        <div class="text-muted font-13">15 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                                <div class="px-3 py-2 text-center"><a class="hover-link font-13" href="javascript:;">view all</a></div>
+                            </div>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle no-arrow d-inline-flex align-items-center" data-toggle="dropdown" href="#"><span class="d-none d-sm-inline-block mr-2">John Due</span><span class="position-relative d-inline-block"><img class="rounded-circle" src="../assets/img/users/admin-image.png" alt="image" width="36" /><span class="badge-point badge-success avatar-badge"></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0 pb-4" style="min-width: 280px;">
+                                <div class="p-4 mb-4 media align-items-center text-white" style="background-color: #2c2f48;"><img class="rounded-circle mr-3" src="../assets/img/users/admin-image.png" alt="image" width="55" />
+                                    <div class="media-body">
+                                        <h5 class="mb-1">Jonathan Due</h5>
+                                        <div class="font-13">Administrator</div>
+                                    </div>
+                                </div><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-user mr-3 font-18 text-muted"></i>Profile</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-message-square mr-3 font-18 text-muted"></i>Messages</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-settings mr-3 font-18 text-muted"></i>Settings</a>
+                                <div class="dropdown-divider my-3"></div>
+                                <div class="mx-4"><a class="btn btn-link p-0" href="#"><span class="btn-icon"><i class="ft-power mr-2 font-18"></i>Logout</span></a></div>
+                            </div>
+                        </li>
+                        <li><a class="nav-link navbar-icon quick-sidebar-toggler" href="javascript:;"><span class="ti-align-right"></span></a></li>
+                    </ul>
+                </nav><!-- END: Header-->
+
+
+
+                                        <div class="card col-md-3" style="border-radius:0px;position:fixed;top:6%;z-index:10;">
+                                            <div class="card-body" style="margin:auto;">
+                                <h5 class="box-title text-primary">AJOUTER UN PRODUIT</h5>
+                            </div>
+                                                                    <div class="card-body" style="margin-top:-14%;">                           
+                                            <div class="md-form mb-4"><input class="md-form-control" type="text"  taille="255" tip="chaine" oninput="verifier(this);"><label>Nom Produit</label></div>
+                                            <div class="md-form mb-4"><input class="md-form-control" type="text"  taille="4" tip="numero" oninput="verifier(this);"><label>Prix Produit</label></div>
+                                            <div class="md-form mb-4"><input class="md-form-control" type="text" taille="4" tip="numero" oninput="verifier(this);"><label>Quantité</label></div>
+                                            <div class="md-form mb-4"><select class="md-form-control form-control select2_demo">
+                                                <option value="option">Genre</option>
+                                                <option value="option">Homme</option>
+                                                <option value="option">Femme</option>
+                                                <option value="option">enfant</option>
+                                            </select></div>
+                                            <div class="md-form mb-4"><input class="form-control" type="file"></div> 
+                                            <div class="md-form"><i class="material-icons prefix">description</i><textarea class="md-form-control auto-resize" taille="255" oninput="verifier(this);"></textarea><label>Description</label></div>
+                                                                            <div class="row">
+                                           <div class="col-md-3" style="margin:auto;">
+                                               <button class="btn btn-primary" type="submit">Soumettre le produit</button>
+                                           </div>                                   
+                                                                            </div>
+                                
+                                        </div>
+                        </div>
+
+                <div class="page-content fade-in-up">
+                    <!-- BEGIN: Page heading-->
+                    <div class="page-heading" style="margin-left:40%;margin-top:1%;">
+                        <div class="page-breadcrumb">
+                            <h1 class="page-title page-title-sep">Boutique</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="la la-home font-20"></i></a></li>
+                                <li class="breadcrumb-item">Forms</li>
+                                <li class="breadcrumb-item">Boutique</li>
+                            </ol>
+                        </div>
+                    </div><!-- BEGIN: Page content-->                    
+<div style="margin-top:3%;">
+    <div class="col-md-3" style="margin:auto;margin-bottom:5%;">
+                                <div class="card">
+                                    <div class="card-cup bg-danger text-white justify-content-center">
+                                        <h5 class="mb-0">MASCULIN</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Nom du produit</h5>
+                                        <p class="card-text"><img src="../assets/img/clothes/1.jpg" alt=""></p>
+                                        <div class="text-muted font-13">description</div>
+                                        <hr>
+                                        <div class="flexbox"><a href="#">QUANTITE : 2</a>
+                                            <div><span class="text-muted mr-4"><i class="far fa-dollar-sign mr-2"></i>24</span><a class="dropdown-toggle no-arrow" data-toggle="dropdown"><i class="ti-more-alt" style="color:blue;cursor:pointer;"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil mr-3"></i>Create</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil-alt mr-3"></i>Edit</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-close mr-3"></i>Remove</a></div>
+                                            </div>
+
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+    <div class="col-md-3" style="margin:auto;margin-bottom:5%;">
+                                <div class="card">
+                                    <div class="card-cup bg-primary text-white justify-content-center">
+                                        <h5 class="mb-0">FEMININ</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Nom du produit</h5>
+                                        <p class="card-text"><img src="../assets/img/clothes/2.jpg" alt=""></p>
+                                        <div class="text-muted font-13">description</div>
+                                        <hr>
+                                        <div class="flexbox"><a href="#">QUANTITE : 122</a>
+                                            <div><span class="text-muted mr-4"><i class="far fa-dollar-sign mr-2"></i>246</span><a class="dropdown-toggle no-arrow" data-toggle="dropdown"><i class="ti-more-alt" style="color:blue;cursor:pointer;"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil mr-3"></i>Create</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil-alt mr-3"></i>Edit</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-close mr-3"></i>Remove</a></div>
+                                            </div>
+
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+    <div class="col-md-3" style="margin:auto;margin-bottom:5%;">
+                                <div class="card">
+                                    <div class="card-cup text-white justify-content-center" style="background:#FF1493;">
+                                        <h5 class="mb-0">ENFANT</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Nom du produit</h5>
+                                        <p class="card-text"><img src="../assets/img/clothes/2.jpg" alt=""></p>
+                                        <div class="text-muted font-13">description</div>
+                                        <hr>
+                                        <div class="flexbox"><a href="#">QUANTITE : 122</a>
+                                            <div><span class="text-muted mr-4"><i class="far fa-dollar-sign mr-2"></i>246</span><a class="dropdown-toggle no-arrow" data-toggle="dropdown"><i class="ti-more-alt" style="color:blue;cursor:pointer;"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil mr-3"></i>Create</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-pencil-alt mr-3"></i>Edit</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ti-close mr-3"></i>Remove</a></div>
+                                            </div>
+
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                        
+</div>
+                </div><!-- BEGIN: Footer-->
+            </div><!-- END: Content-->
+        </div>
+    </div><!-- BEGIN: Search form-->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 100px">
+            <div class="modal-content">
+                <form class="search-top-bar" action="#"><input class="form-control search-input" type="text" placeholder="Search..."><button class="reset input-search-icon" type="submit"><i class="ft-search"></i></button><button class="reset input-search-close" type="button" data-dismiss="modal"><i class="ft-x"></i></button></form>
+            </div>
+        </div>
+    </div><!-- END: Search form-->
+    <!-- BEGIN: Quick sidebar-->
+    <div class="quick-sidebar" id="quick-sidebar">
+        <div class="px-4 quick-sidebar-header">
+            <ul class="nav nav-pills nav-pills-solid nav-justified w-100">
+                <li class="nav-item mr-2"><a class="nav-link active" data-toggle="pill" href="#sidenav-tab-messages">Messages</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-settings">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-log">Logs</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active h-100" id="sidenav-tab-messages">
+                <div class="position-relative custom-scroll h-100">
+                    <div class="flexbox px-4 mb-4 mt-3"><span class="text-muted">23 Messages</span><a href="mailbox.html">View All</a></div>
+                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="../assets/img/users/u1.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-settings">
+                <div class="position-relative custom-scroll h-100">
+                    <h5 class="mb-4">App Settings</h5>
+                    <div class="flexbox py-3">Enable notifications:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">SMS notifications:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Chat history:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-log">
+                <div class="position-relative custom-scroll h-100">
+                    <ul class="timeline timeline-default outline-points">
+                        <li class="timeline-item">2 Issue fixed<span class="font-13 text-muted ml-2">Just now</span></li>
+                        <li class="timeline-item"><span>15 New orders<span class="badge badge-primary badge-pill ml-2">important</span></span><span class="font-13 text-muted ml-2">5 mins</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Quick sidebar-->
+    <!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script src="../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script><!-- PAGE LEVEL PLUGINS-->
+    <script src="../assets/vendors/dropzone/dist/min/dropzone.min.js"></script><!-- CORE SCRIPTS-->
+    <script src="../assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+        <script src="../assets/js/script.js"></script>
+    <script>
+        Dropzone.options.mydropzoneSingle = {
+                paramName: "file", // The name that will be used to transfer the file
+                //url: './assets/demo/server.php',
+                maxFiles: 1,
+                maxFilesize: 5, // MB
+                addRemoveLinks: !0,
+                accept: function(file, done) {
+                    if (file.name == "justinbieber.jpg") {
+                        done("Naha, you don't.");
+                    } else {
+                        done();
+                    }
+                }
+            },
+            Dropzone.options.mydropzoneMultiple = {
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 5, // MB
+                addRemoveLinks: !0,
+                accept: function(file, done) {
+                    if (file.name == "justinbieber.jpg") {
+                        done("Naha, you don't.");
+                    } else {
+                        done();
+                    }
+                }
+            }
+        Dropzone.options.mydropzoneValidation = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 5, // MB
+            acceptedFiles: "image/*,application/pdf,.psd",
+            addRemoveLinks: !0,
+            accept: function(file, done) {
+                if (file.name == "justinbieber.jpg") {
+                    done("Naha, you don't.");
+                } else {
+                    done();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
