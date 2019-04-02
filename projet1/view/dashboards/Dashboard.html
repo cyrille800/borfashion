@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="admin template, angular admin template, bootstrap admin template, modern admin template, modern design admin template, dashboard template, responsive admin template, angular web app, crypto dashboard, bitcoin dashboard">
+    <title>Bootstrap &amp; Angular admin template + crypto dashboard - modern design admin | Dashboard</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../assets/vendors/feather-icons/feather.css" rel="stylesheet" />
+    <link href="../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../assets/vendors/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="../assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" /><!-- PAGE LEVEL VENDORS-->
+    <link href="../assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" /><!-- THEME STYLES-->
+    <link href="../assets/css/app.min.css" rel="stylesheet" /><!-- PAGE LEVEL STYLES-->
+    <style>.tasks-list>li {
+padding-right: 0;
+padding-left: 0;
+padding: .8rem 1.5rem;
+}
+.task-actions {
+display: none;
+position: absolute;
+right: 20px;
+top: 50%;
+margin-top: -15px;
+}
+.task-actions>a.dropdown-toggle {
+color: #aaa;
+height: 30px;
+width: 30px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+.task-info {
+padding-left: 34px;
+}
+.tasks-list>li .checkbox input:checked~span {
+text-decoration: line-through;
+}
+.tasks-list>li:hover .task-actions {
+display: block
+}
+</style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-wrapper">
+            <!-- BEGIN: Sidebar-->
+            <div class="page-sidebar custom-scroll" id="sidebar">
+                <div class="sidebar-header"><a class="sidebar-brand" href="index.html">ADMIN</a><a class="sidebar-brand-mini" href="index.html">Rd</a><span class="sidebar-points"><span class="badge badge-success badge-point mr-2"></span><span class="badge badge-danger badge-point mr-2"></span><span class="badge badge-warning badge-point"></span></span></div>
+                <ul class="sidebar-menu metismenu">
+                    <li class="heading"><span>DASHBOARDS</span></li>
+                    <li class="mm-active"><a href="javascript:;"><i class="sidebar-item-icon ft-home"></i><span class="nav-label">Dashboards</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a class="mm-active" href="Dashboard.html">Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-file-plus"></i><span class="nav-label">Produit</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="../basic ui/add_produit.php" target="frame1">Ajouter un produit</a></li>
+                            <li><a href="../basic ui/consulter_produits.php" target="frame1">Consulter produits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html"><i class="sidebar-item-icon ft-users"></i><span class="nav-label">Fournisseur</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="../basic ui/add_fournisseur.php" target="frame1">Ajouter un fournisseur</a></li>
+                            <li><a href="../basic ui/consulter_fournisseur.php" target="frame1">Consulter fournisseur</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="heading"><span>COMMUNICATION</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-anchor"></i><span class="nav-label">Publicitées</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="../basic ui/add_pub.html" target="frame1">Ajouter une pub</a></li>
+                            <li><a href="../basic ui/MonBlog-mvc-objet/index.php" target="frame1">Consulter pub</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-layers"></i><span class="nav-label">Offres</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="../basic ui/add_offre.php" target="frame1">Ajouter une offre</a></li>
+                            <li><a href="../basic ui/consulter_offre.php" target="frame1">Consulter offre</a></li>
+                            <li><a href="../basic ui/afficherOffre.php" target="frame1">table offre</a></li>
+                        </ul>
+                    </li>
+                     <li><a href="../calendar/calendar.html" target="frame1"><i class="sidebar-item-icon ft-calendar"></i><span class="nav-label">Calendrier</span></a></li>
+                    <li class="heading"><span>PARTENARIA</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Partenaires</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="../basic ui/partenaires.html" target="frame1">Ajouter un partenaire</a></li>
+                            <li><a href="form-bootstrap-inputs.html">consulter partenaire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Boutique affiliées</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="summernote-editor.html">Consulter boutique</a></li>
+                        </ul>
+                    </li>
+                    <li class="heading"><span>CLIENTS</span></li>
+
+                    <li class="heading"><span>PAGES &amp; APPS</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-anchor"></i><span class="nav-label">Menu Levels</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="javascript:;">Level 2</a></li>
+                            <li><a href="javascript:;"><span class="nav-label">Level 2</span><i class="arrow la la-angle-right"></i></a><!-- 3-rd level-->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- END: Sidebar-->
+            <!-- BEGIN: Content-->
+            <div class="content-area">
+                <!-- BEGIN: Header-->
+                <nav class="navbar navbar-expand navbar-light fixed-top header">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link navbar-icon sidebar-toggler" id="sidebar-toggler" href="#"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></li>
+                        <li class="nav-item dropdown d-none d-sm-inline-block"><a class="nav-link dropdown-toggle megamenu-link" href="#" data-toggle="dropdown"><span>Apps<i class="ti-angle-down arrow ml-2"></i></span></a>
+                            <div class="dropdown-menu nav-megamenu" style="min-width: 400px">
+                                <div class="row m-0">
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-activity item-badge mb-4"></i>
+                                            <h5 class="mb-2">Activity</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item bg-primary text-white" href="#"><i class="ft-globe item-badge mb-4 text-white"></i>
+                                            <h5 class="mb-2">Customers</h5>
+                                            <div class="text-white font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-layers item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Projects</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-shopping-cart item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Orders</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link navbar-icon" href="javascript:;" data-toggle="modal" data-target="#search-modal"><i class="ft-search"></i></a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle navbar-icon" data-toggle="dropdown" href="#"><i class="ft-bell position-relative"></i><span class="notify-signal bg-primary"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0" style="min-width: 350px">
+                                <div class="py-4 px-3 text-center text-white mb-3" style="background-color: #2c2f48;">
+                                    <h5 class="m-0">7 New Notifications</h5>
+                                </div>
+                                <div class="custom-scroll position-relative mb-3" style="height:320px;">
+                                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-shopping-cart text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">2 New Orders</h6>
+                                                        <div class="text-muted font-13">15 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-server text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">Server overloaded 91%</h6>
+                                                        <div class="text-muted font-13">40 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-support text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">New support request</h6>
+                                                        <div class="text-muted font-13">1 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-info-alt text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">System Warning</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-email text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">You have 2 new messages</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-user text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">24 new users registered</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                                <div class="px-3 py-2 text-center"><a class="hover-link font-13" href="javascript:;">view all</a></div>
+                            </div>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle no-arrow d-inline-flex align-items-center" data-toggle="dropdown" href="#"><span class="d-none d-sm-inline-block mr-2">John Due</span><span class="position-relative d-inline-block"><img class="rounded-circle" src="../assets/img/users/admin-image.png" alt="image" width="36" /><span class="badge-point badge-success avatar-badge"></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0 pb-4" style="min-width: 280px;">
+                                <div class="p-4 mb-4 media align-items-center text-white" style="background-color: #2c2f48;"><img class="rounded-circle mr-3" src="../assets/img/users/admin-image.png" alt="image" width="55" />
+                                    <div class="media-body">
+                                        <h5 class="mb-1">Jonathan Due</h5>
+                                        <div class="font-13">Administrator</div>
+                                    </div>
+                                </div><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-user mr-3 font-18 text-muted"></i>Profile</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-message-square mr-3 font-18 text-muted"></i>Messages</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-settings mr-3 font-18 text-muted"></i>Settings</a>
+                                <div class="dropdown-divider my-3"></div>
+                                <div class="mx-4"><a class="btn btn-link p-0" href="#"><span class="btn-icon"><i class="ft-power mr-2 font-18"></i>Logout</span></a></div>
+                            </div>
+                        </li>
+                        <li><a class="nav-link navbar-icon quick-sidebar-toggler" href="javascript:;"><span class="ti-align-right"></span></a></li>
+                    </ul>
+                </nav><!-- END: Header-->
+                <div class="page-content" style="padding:0px;">
+                    <!-- BEGIN: Page heading-->
+                <iframe src="../calendar/calendar.html" style="height:auto;border:none;background-color: #f2f3fa;" class="col-md-12" name="frame1">
+
+                </iframe>
+                </div><!-- BEGIN: Footer-->
+            </div><!-- END: Content-->
+        </div>
+    </div><!-- BEGIN: Search form-->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 100px">
+            <div class="modal-content">
+                <form class="search-top-bar" action="#"><input class="form-control search-input" type="text" placeholder="Search..."><button class="reset input-search-icon" type="submit"><i class="ft-search"></i></button><button class="reset input-search-close" type="button" data-dismiss="modal"><i class="ft-x"></i></button></form>
+            </div>
+        </div>
+    </div><!-- END: Search form-->
+    <!-- BEGIN: Quick sidebar-->
+    <div class="quick-sidebar" id="quick-sidebar">
+        <div class="px-4 quick-sidebar-header">
+            <ul class="nav nav-pills nav-pills-solid nav-justified w-100">
+                <li class="nav-item mr-2"><a class="nav-link active" data-toggle="pill" href="#sidenav-tab-messages">Messages</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-settings">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-log">Logs</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active h-100" id="sidenav-tab-messages">
+                <div class="position-relative custom-scroll h-100">
+                    <div class="flexbox px-4 mb-4 mt-3"><span class="text-muted">23 Messages</span><a href="mailbox.html">View All</a></div>
+                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="../assets/img/users/u1.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+
+                        </a></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-settings">
+                <div class="position-relative custom-scroll h-100">
+                    <h5 class="mb-4">App Settings</h5>
+                    <div class="flexbox py-3">Enable notifications:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">SMS notifications:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Chat history:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Show recent activity:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">Users log:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Site Tracking:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-log">
+                <div class="position-relative custom-scroll h-100">
+                    <ul class="timeline timeline-default outline-points">
+                        <li class="timeline-item">2 Issue fixed<span class="font-13 text-muted ml-2">Just now</span></li>
+                        <li class="timeline-item"><span>15 New orders<span class="badge badge-primary badge-pill ml-2">important</span></span><span class="font-13 text-muted ml-2">5 mins</span></li>
+                        <li class="timeline-item">18 new orders sent<span class="font-13 text-muted ml-2">24 mins</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- END: Quick sidebar-->
+    <!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script src="../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script><!-- PAGE LEVEL PLUGINS-->
+    <script src="../assets/vendors/moment/min/moment.min.js"></script>
+    <script src="../assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../assets/vendors/chart.js/dist/Chart.min.js"></script><!-- CORE SCRIPTS-->
+    <script src="../assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            var MONTHS_SH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            var color = Chart.helpers.color;
+            (function() {
+                var dr = $('#subheader_daterange');
+                if (dr.length) {
+                    var t = moment();
+                    var a = moment();
+                    dr.daterangepicker({
+                            startDate: t,
+                            endDate: a,
+                            ranges: {
+                                'Today': [moment(), moment()],
+                                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                            },
+                        }, f),
+                        f(t, a, "");
+                }
+
+                function f(t, a, r) {
+                    var o = "",
+                        n = "";
+                    a - t < 100 || "Today" == r ?
+                        (o = "Today:", n = t.format("MMM D")) :
+                        "Yesterday" == r ? (o = "Yesterday:", n = t.format("MMM D")) :
+                        n = t.format("MMM D") + " - " + a.format("MMM D"), dr.find(".subheader-daterange-date").html(n), dr.find(".subheader-daterange-title").html(o)
+                }
+            })();
+            if ($('#donut_chart_1').length) {
+                var ctx = document.getElementById("donut_chart_1").getContext("2d");
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["In-Store Sales", 'Online Sales'],
+                        datasets: [{
+                            data: [57, 21],
+                            backgroundColor: [theme_color('primary'), theme_color('danger')],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        legend: {
+                            display: false
+                        },
+                        cutoutPercentage: 65,
+                        circumference: 1.6 * Math.PI,
+                    }
+                });
+            }
+            if ($('#line_chart_1').length) {
+                var ctx = document.getElementById("line_chart_1").getContext("2d");
+                var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+                var gradientFill = ctx.createLinearGradient(500, 0, 100, 0);
+                gradientFill.addColorStop(0, theme_color('pink'));
+                gradientFill.addColorStop(1, theme_color('purple'));
+                new Chart(ctx, {
+                    type: 'line',
+                    showScale: false,
+                    data: {
+                        labels: MONTHS_SH,
+                        datasets: [{
+                            label: 'Dataset 1',
+                            data: [60, 30, 80, 45, 90, 62, 85, 35, 75, 45, 90, 35],
+                            backgroundColor: gradientFill,
+                            borderColor: gradientFill,
+                            fill: false,
+                            pointRadius: 0,
+                            pointHitRadius: 30,
+                            pointHoverBorderWidth: 5,
+                            pointHoverRadius: 6,
+                            pointHoverBorderColor: gradientFill,
+                            pointBackgroundColor: '#fff',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    display: false,
+                                    max: 60,
+                                },
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    drawBorder: false,
+                                },
+                                ticks: {
+                                    beginAtZero: true,
+                                }
+                            }]
+                        },
+                        legend: {
+                            labels: {
+                                boxWidth: 12
+                            }
+                        },
+                    }
+                });
+            }
+            if ($('#stacked_bars').length) {
+                var ctx = document.getElementById("stacked_bars").getContext("2d");
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: [1, 2, 3, 4, 5],
+                        datasets: [{
+                                label: 'Dataset 1',
+                                backgroundColor: theme_color('primary'),
+                                stack: 'Stack 0',
+                                data: [30, 55, 70, 45, 32],
+                            },
+                            {
+                                label: 'Dataset 2',
+                                backgroundColor: theme_color('danger'),
+                                stack: 'Stack 0',
+                                data: [10, 15, 15, 35, 30],
+                            },
+                            {
+                                label: 'Dataset 3',
+                                backgroundColor: color(theme_color('primary')).alpha(0.5).rgbString(),
+                                stack: 'Stack 1',
+                                data: [10, 15, 25, 15, 25],
+                            }
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{
+                                stacked: true,
+                                gridLines: false,
+                            }],
+                            yAxes: [{
+                                stacked: true,
+                                display: false,
+                            }]
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
