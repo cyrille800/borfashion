@@ -1,7 +1,7 @@
 <?php
 
 include "../../entities/class_offre.php";
- offre::afficherOffre();
+$listeEmployes=offre::afficherOffre();
  
 ?>
 
@@ -62,12 +62,12 @@ include "../../entities/class_offre.php";
                                     <thead>
                                         <tr>
                                             <th>identifiant</th>
-                                            <th>Categorie</th>
+                                            <th>Titre</th>
                                             <th>Date_debut</th>
                                             <th>Date_fin</th>
-                                            <th>Prix</th>
-                                            <th>liste_produits</th>
                                             <th>titre</th>
+                                            <th>liste_produits</th>
+                                            <th>Prix</th>
                                             <th>suppression</th>
                                             <th>modifications</th>
                                         <?PHP
@@ -76,19 +76,19 @@ foreach($listeEmployes as $row){
     <tbody>
     <tr>
     <td><?PHP echo $row['id']; ?></td>
-    <td><?PHP echo $row['categorie']; ?></td>
     <td><?PHP echo $row['titre']; ?></td>
     <td><?PHP echo $row['date_debut']; ?></td>
     <td><?PHP echo $row['date_fin']; ?></td>
+    <td><?PHP echo $row['description']; ?></td> 
     <td><?PHP echo $row['liste_produit']; ?></td>
     <td><?PHP echo $row['prix']; ?></td>
      
-    <td><form method="post" action="supprimerPub.php">
+    <td><form method="post" action="supprimerOffre.php">
     <input type="submit" name="supprimer" value="supprimer">
-    <input type="hidden" value="<?PHP echo $row['Description']; ?>" name="Description">
+    <input type="hidden" value="<?PHP echo $row['id']; ?>" name="id">
     </form>
     </td>
-    <td><a href="recupererPub.php?Description=<?PHP echo $row['Description']; ?>">
+    <td><a href="recupererOffre.php?id=<?PHP echo $row['id']; ?>">
     Modifier</a></td>
     </tr>
     </tbody>

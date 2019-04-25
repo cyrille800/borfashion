@@ -14,7 +14,7 @@ class Billet extends Modele {
      * @return PDOStatement La liste des billets
      */
     public function getBillets() {
-        $sql = 'select * From publication'
+        $sql = 'select * From publications'
                 . ' order by id_pub desc';
         $billets = $this->executerRequete($sql);
         return $billets;
@@ -27,7 +27,7 @@ class Billet extends Modele {
      * @throws Exception Si l'identifiant du billet est inconnu
      */
     public function getBillet($idBillet) {
-        $sql = 'select * From publication '
+        $sql = 'select * From publications '
                 . ' where id_pub=?';
         $billet = $this->executerRequete($sql, array($idBillet));
         if ($billet->rowCount() > 0)

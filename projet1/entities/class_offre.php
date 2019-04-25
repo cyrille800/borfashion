@@ -149,41 +149,12 @@ class offre{
 	}
 
 	public static function afficherOffre(){
-		//$sql="SElECT * From employe e inner join formationphp.employe a on e.cin= a.cin";
-		 $tableau=array();
-		$tabeaui=array(
-		'id'=>'',
-		'categorie'=>'',
-		'date_debut'=>'',
-		'date_fin'=>'',
-		'description'=>'',
-		'liste_produit'=>'',
-		'prix'=>''
-		
-		);
-		$sql='select * From offre';
-		$db = config::Connexion();
-		try{
-		$liste=$db->query($sql);
-		$liste->execute();
+		 config::connexion();
+		$tableau=[];
+		$tableaui=[];
 		$i=0;
-		while($data=$liste->fetch()){
-			
-			$tabeaui['id']=$data['id'];
-			$tabeaui['categorie']=$data['categorie'];
-			$tabeaui['date_debut']=$data['date_debut'];
-			$tabeaui['date_fin']=$data['date_fin'];
-			$tabeaui['description']=$data['description'];
-			$tabeaui['liste_produit']=$data['liste_produit'];
-			$tabeaui['prix']=$data['prix'];
-			array_push($tableau,$tabeaui);
-		}
-		return $tableau;
-		}
-        catch (Exception $e){
-            die('Erreur: '.$e->getMessage());
-        }	
-        return $tableau;
+		  	$requette=config::$bdd->query("select * from offre order by id desc");
+            return $requette;
 	}
 
 
@@ -238,6 +209,50 @@ class offre{
         echo '</div>';
 
 	}
+ 
+
+ public static function modifierOffre($offre){
+		config::connexion();
+		$req=config::$bdd->prepare("UPDATE offre SET  titre=:titre,date_debut=:date_debut,date_fin=:date_fin,description=:description,liste_produit=:liste_produit,prix=:prix WHERE id=:id");
+		  
+	  	if($req->execute([
+		':titre'=>$this->get_titre(),
+		':date_debut'=>$this->get_date_debut(),
+		':date_fin'=>$this->get_date_fin(),
+		':description'=>$this->get_description(),
+		':liste_produit'=>$this->get_liste_produit(),
+		':prix'=>intval($this->get_prix())]
+	  	)){
+	  		return 1;
+	  	};
+	  	return 0;
+		 
+		//$db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+
+		
+	}
+
+
+ 
+        
+    public static function recupererOffre($id){
+		$i=0;
+		config::connexion();
+		$req="SELECT * from offre where titre=$titre";
+		  	$requette=config::$bdd->query($req);
+                		while($data=$requette->fetch()){
+		$i++;                		
+	}
+
+	if($i>0){
+		return false;
+	}
+	else{
+		return true;
+	}
+
+	}
+    
 }
 
 ?>

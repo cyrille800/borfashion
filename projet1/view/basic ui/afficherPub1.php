@@ -62,6 +62,7 @@ $listeEmployes=$PublicationP1->afficherPublicationP();
                                 <table class="table table-bordered table-striped table-sortable">
                                     <thead>
                                         <tr>
+                                            <th>Identifiant</th> 
                                             <th>Description</th>
                                             <th>Categorie</th>
                                             <th>Date_debut</th>
@@ -72,9 +73,11 @@ $listeEmployes=$PublicationP1->afficherPublicationP();
                                             <th>modifications</th>
                                         <?PHP
 foreach($listeEmployes as $row){
+    //var_dump($row);
     ?>
     <tbody>
     <tr>
+    <td><?PHP echo $row['id_pub']; ?></td> 
     <td><?PHP echo $row['Description']; ?></td>
     <td><?PHP echo $row['Categorie']; ?></td>
     <td><?PHP echo $row['Date_debut']; ?></td>
@@ -83,10 +86,10 @@ foreach($listeEmployes as $row){
     <td><?PHP echo $row['Type']; ?></td>
     <td><form method="post" action="supprimerPub.php">
     <input type="submit" name="supprimer" value="supprimer">
-    <input type="hidden" value="<?PHP echo $row['Description']; ?>" name="Description">
+    <input type="hidden" value="<?PHP echo $row['id_pub']; ?>" name="id_pub">
     </form>
     </td>
-    <td><a href="recupererPub.php?Description=<?PHP echo $row['Description']; ?>">
+    <td><a href="recupererPub.php?id_pub=<?PHP echo $row['id_pub']; ?>">
     Modifier</a></td>
     </tr>
     </tbody>

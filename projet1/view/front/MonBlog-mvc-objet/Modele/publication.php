@@ -1,4 +1,4 @@
- <?PHP
+<?PHP
 class Publication{
 	private $titre;
 	private $categorie;
@@ -6,14 +6,12 @@ class Publication{
 	private $date_fin;
 	private $description;
 	private $type;
-	function __construct($description,$categorie,$date_debut,$date_fin,$titre,$type){
+	function __construct($titre,$categorie,$date_debut,$date_fin,$description){
 		$this->titre=$titre;
 		$this->categorie=$categorie;
 		$this->date_debut=$date_debut;
 		$this->date_fin=$date_fin;
 		$this->description=$description;
-	    $this->type=$type;
-	
 	}
 	
 	function gettitre(){
@@ -40,7 +38,7 @@ class Publication{
 		$this->titre=$titre;
 	}
 	function setCate($categorie){
-		$this->categorie=$categorie;
+		$this->categorie;
 	}
 	function setDD($date_debut){
 		$this->date_debut=$date_debut;
@@ -49,7 +47,7 @@ class Publication{
 		$this->date_fin=$date_fin;
 	}
 	function settype($type){
-		$this->type=$type;
+		$this->type;
 	}
 }
 

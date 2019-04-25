@@ -1,6 +1,8 @@
 <?PHP
-include "config2.php";
-class PublicationP{
+require_once 'Modele.php';
+
+include "config.php";
+class PublicationP extends Modele {
 function afficherPublication($Publication){
 		echo "Titre: ".$Publication->gettitre()."<br>";
 		echo "Catégorie: ".$Publication->getcate()."<br>";
@@ -13,7 +15,7 @@ function afficherPublication($Publication){
 		echo $employe->getNbHeures() * $employe->getTarifHoraire();
 	}
 	function ajouterPublication($Publication){
-		$sql="insert into publications (Description,Categorie,Date_debut,Date_fin,Titre,Type) values (:Description, :Categorie,:Date_debut,:Date_fin,:Titre,:Type)";
+		$sql="insert into Publication (Description,Categorie,Date_debut,Date_fin,Titre,Type) values (:Description, :Categorie,:Date_debut,:Date_fin,:Titre,:Type)";
 		$db = config::getConnexion();
 		try{
         $req=$db->prepare($sql);
@@ -43,7 +45,6 @@ function afficherPublication($Publication){
 		//$sql="SElECT * From employe e inner join formationphp.employe a on e.cin= a.cin";
 		 $tableau=array();
 		$tabeaui=array(
-		'id_pub'=>'',
 		'Description'=>'',
 		'Categorie'=>'',
 		'Date_debut'=>'',
@@ -51,7 +52,7 @@ function afficherPublication($Publication){
 		'Titre'=>'',
 		'Type'=>''
 		);
-		$sql='select * From publications ';
+		$sql='select * From publication';
 		$db = config::getConnexion();
 		try{
 		$liste=$db->query($sql);
@@ -59,7 +60,6 @@ function afficherPublication($Publication){
 		$i=0;
 		while($data=$liste->fetch()){
 			
-			$tabeaui['id_pub']=$data['id_pub'];
 			$tabeaui['Description']=$data['Description'];
 			$tabeaui['Categorie']=$data['Categorie'];
 			$tabeaui['Date_debut']=$data['Date_debut'];
@@ -75,31 +75,11 @@ function afficherPublication($Publication){
         }	
         return $tableau;
 	}
-	
-
-
-
-
-function getBillet($idBillet) {
-     $db = config::getConnexion();
-    $billet = $db->prepare( 'select * From publication'
-            . ' where id_pub=?');
-    $billet->execute(array($idBillet));
-    if ($billet->rowCount() > 0)
-        return $billet->fetch();  // Accès à la première ligne de résultat
-    else
-        throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
-}
-	
-
-
-
-
-	function supprimerPublication($id_pub){
-		$sql="DELETE FROM publications where id_pub= :id_pub";
+	function supprimerPublication($Description){
+		$sql="DELETE FROM publication where Description= :Description";
 		$db = config::getConnexion();
         $req=$db->prepare($sql);
-		$req->bindValue(':id_pub',intval($id_pub));
+		$req->bindValue(':Description',$Description);
 		try{
             $req->execute();
            // header('Location: index.php');
@@ -108,8 +88,8 @@ function getBillet($idBillet) {
             die('Erreur: '.$e->getMessage());
         }
 	}
-	function modifierPublication($Publication){
-		$sql="UPDATE publications SET   Description=:Description,Categorie=:Categorie,Date_debut=:Date_debut,Date_fin=:Date_fin,Titre=:Titre,Type=:Type WHERE id_pub=:id_pub";
+	function modifierEmploye($Publication,$des){
+		$sql="UPDATE employer SET Desc=:des, titre=:titre,catégorie=:catégorie,date_debut=:date_debut,date_fin=:date_fin WHERE desc=:desc";
 		
 		$db = config::getConnexion();
 		//$db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
@@ -120,14 +100,13 @@ try{
         $cate=$Publication->getcate();
         $DD=$Publication->getDD();
         $DF=$Publication->getDF();
-		$type=$Publication->gettype();
-		$datas = array(':Description'=>$des, ':Titre'=>$titre,':Categorie'=>$cate,':Date_debut'=>$DD,':Date_fin'=>$DF,':Type'=>$type);
-		$req->bindValue(':Description',$des);
-		$req->bindValue(':Type',$type);
-		$req->bindValue(':Titre',$titre);
-		$req->bindValue(':Categorie',$cate);
-		$req->bindValue(':Date_debut',$DD);
-		$req->bindValue(':Date_fin',$DF);
+		$datas = array(':des'=>$des, ':desc'=>$desc, ':titre'=>$titre,':catégorie'=>$cate,':date_debut'=>$DD,':date_fin'=>$DF);
+		$req->bindValue(':des',$des);
+		$req->bindValue(':desc',$desc);
+		$req->bindValue(':titre',$titre);
+		$req->bindValue(':catégorie',$cate);
+		$req->bindValue(':date_debut',$DD);
+		$req->bindValue(':date_fin',$DF);
 		
 		
             $s=$req->execute();
@@ -141,8 +120,8 @@ try{
         }
 		
 	}
-	function RecupererPub($id_pub){
-		$sql="SELECT * from publications where id_pub=$id_pub";
+	function recupererEmploye($cin){
+		$sql="SELECT * from employe where cin=$cin";
 		$db = config::getConnexion();
 		try{
 		$liste=$db->query($sql);
@@ -164,6 +143,27 @@ try{
             die('Erreur: '.$e->getMessage());
         }
 	}
+
+
+ public function getBillets() {
+        $sql = 'select Description as description, Categorie as categorie,'
+                . ' Date_debut as date_debut, Date_fin as date_fin Titre as titre Type as type from publication'
+                . ' order by Description desc';
+        $billets = $this->executerRequete($sql);
+        return $billets;
+    }
+
+public function getBillet($idBillet) {
+        $sql = 'select Description as description, Categorie as categorie,'
+                . ' Date_debut as date_debut, Date_fin as date_fin Titre as titre Type as type from publication'
+                . ' where Description=?';
+        $billet = $this->executerRequete($sql, array($idBillet));
+        if ($billet->rowCount() > 0)
+            return $billet->fetch();  // Accès à la première ligne de résultat
+        else
+            throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
+    }
+
 }
 
 ?>

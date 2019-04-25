@@ -5,10 +5,11 @@
 <?PHP
 include "publication.php";
 include "publicationP.php";
-if (isset($_GET['Description'])){
+if (isset($_GET['id_pub'])){
 	$publicationP=new PublicationP();
-    $result=$publicationP->recupererPub($_GET['Description']);
+    $result=$publicationP->RecupererPub(($_GET['id_pub']));
 	foreach($result as $row){
+		
 		$Description=$row['Description'];
 		$Categorie=$row['Categorie'];
 		$Date_debut=$row['Date_debut'];
@@ -21,26 +22,26 @@ if (isset($_GET['Description'])){
 <table>
 <caption>Modifier Employe</caption>
 <tr>
-<td>CIN</td>
+<td>Description</td>
 <td><input type="text" name="Description" value="<?PHP echo $Description ?>"></td>
 </tr>
 <tr>
-<td>Nom</td>
+<td>Categorie</td>
 <td><input type="text" name="Categorie" value="<?PHP echo $Categorie ?>"></td>
 </tr>
 <tr>
-<td>Prenom</td>
+<td>Date_debut</td>
 <td><input type="text" name="Date_debut" value="<?PHP echo $Date_debut ?>"></td>
 </tr>
 <tr>
-<td>nb heures</td>
+<td>Date_fin</td>
 <td><input type="text" name="Date_fin" value="<?PHP echo $Date_fin ?>"></td>
 </tr>
 <tr>
-<td>tarif horaire</td>
+<td>Titre</td>
 <td><input type="text" name="Titre" value="<?PHP echo $Titre ?>"></td>
 </tr>
-<td>tarif horaire</td>
+<td>Type</td>
 <td><input type="text" name="Type" value="<?PHP echo $Type ?>"></td>
 </tr>
 <tr>
@@ -49,7 +50,7 @@ if (isset($_GET['Description'])){
 </tr>
 <tr>
 <td></td>
-<td><input type="hidden" name="cin_ini" value="<?PHP echo $_GET['Description'];?>"></td>
+<td><input type="hidden" name="cin_ini" value="<?PHP echo $_GET['id_pub'];?>"></td>
 </tr>
 </table>
 </form>
@@ -58,7 +59,7 @@ if (isset($_GET['Description'])){
 }
    if (isset($_POST['modifier'])){
 	$employe=new Publication($_POST['Description'],$_POST['Categorie'],$_POST['Date_debut'],$_POST['Date_fin'],$_POST['Titre'],$_POST['Type']);
-	$publicationP->modifierPublication($employe,$_POST['cin_ini']);
+	$publicationP->modifierPublication($employe,($_POST['cin_ini']));
 	 echo $_POST['cin_ini'];
 	header('Location: afficherPub1.php');
 }

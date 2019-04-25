@@ -50,8 +50,8 @@
                             <!-- Account tabs -->
                             <div class="tabs account-tabs">
                                 <ul>
-                                    <li><a href="compte_client.php">Mon compte</a></li>
-                                    <li class="is-active"><a href="pub&offre.php">Pub & Offre</a></li>
+                                    <li><a href="MonBlog-mvc-objet/index.php">Mon compte</a></li>
+                                    <li class="is-active"><a href="../basic ui/consulter_offre.php">Pub & Offre</a></li>
                                     <li><a href="panier.php">Panier</a></li>
                                 </ul>
                             </div>
